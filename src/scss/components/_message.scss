@@ -1,0 +1,14 @@
+body[data-theme='light'] {
+  --message-color: var(--gray-300);
+}
+
+body[data-theme='dark'] {
+  --message-color: var(--white);
+}
+
+.message {
+  margin-top: 4rem;
+  color: var(--message-color);
+  text-align: center;
+  font-size: 1.25rem;
+}

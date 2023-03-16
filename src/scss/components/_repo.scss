@@ -1,0 +1,120 @@
+@import '../base/variables';
+
+body[data-theme='light'] {
+  --card-bg: var(--white);
+  --text-color: var(--gray-200);
+  --card-shadow: var(--shadow);
+  --stat-bg: var(--gray-50);
+  --stat-color: var(--gray-300);
+  --title-color: var(--gray-300);
+  --updated-color: var(--gray-100);
+}
+
+body[data-theme='dark'] {
+  --card-bg: var(--gray-400);
+  --text-color: var(--white);
+  --card-shadow: unset;
+  --stat-bg: var(--gray-500);
+  --stat-color: var(--white);
+  --title-color: var(--white);
+  --updated-color: var(--white);
+}
+
+.repo {
+  margin-top: 3rem;
+  width: 100%;
+  padding: 2rem 1.5rem 2.5rem;
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  color: var(--text-color);
+  border-radius: 15px;
+
+  &-list {
+    margin-bottom: 5rem;
+  }
+
+  &-title {
+    margin-top: 0.5rem;
+    a {
+      color: var(--title-color);
+      font-size: 1.5rem;
+      line-height: 1.5;
+      font-weight: 700;
+      transition: 0.1s color ease-in-out;
+
+      &:hover {
+        color: var(--main-color);
+      }
+    }
+  }
+
+  &-creator {
+    text-align: end;
+    font-size: 0.75rem;
+    line-height: 1.5;
+
+    & a {
+      transition: 0.1s color ease-in-out;
+      color: var(--main-color);
+
+      &:hover {
+        color: var(--main-color-hover);
+      }
+
+      &::before {
+        content: '@';
+      }
+    }
+
+    @media (min-width: $md3) {
+      font-size: 1rem;
+    }
+  }
+
+  &-updated {
+    font-size: 0.875rem;
+    color: var(--updated-color);
+  }
+
+  &-description {
+    margin-top: 1.75rem;
+    line-height: 1.5;
+    color: var(--descr-color);
+    max-width: 50ch;
+
+    &.empty {
+      opacity: 0.75;
+    }
+  }
+
+  &-topics {
+    margin-top: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0rem 0.75rem;
+    max-width: 50ch;
+
+    & .repo-tag {
+      font-size: 0.825rem;
+      transition: 0.1s color ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--main-color);
+      }
+
+      &::before {
+        content: '#';
+      }
+    }
+
+    @media (min-width: $md2) {
+      gap: 0rem 1rem;
+    }
+  }
+
+  @media (min-width: $md2) {
+    padding: 2.5rem;
+    gap: 2rem 2.5rem;
+  }
+}

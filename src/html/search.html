@@ -1,0 +1,16 @@
+<form autocomplete="off" name="form">
+  <div class="search">
+    <label for="search" class="search-label">
+      @@include('../assets/icon-search.svg', {})
+    </label>
+    <input
+      type="text"
+      id="search"
+      class="search-field"
+      name="repo"
+      placeholder="Search GitHub repository.."
+    />
+    <div class="search-error" hidden>At least 3 letters</div>
+    <button class="button">Search</button>
+  </div>
+</form>

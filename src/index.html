@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Repofinder" })
+  <body data-theme="light">
+    <main>
+      <div class="container">
+        @@include('html/header.html', {}) @@include('html/search.html', {})
+        <div class="message">No results yet - search some!</div>
+        <div class="spinner" hidden>@@include('assets/spinner.svg', {})</div>
+        <ul class="repo-list"></ul>
+      </div>
+    </main>
+    <!-- @@include('html/footer.html', {}) -->
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

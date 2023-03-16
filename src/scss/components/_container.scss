@@ -1,0 +1,12 @@
+@import '../base/variables';
+
+.container {
+  width: 100%;
+  padding: 0 1.5rem;
+
+  @media (min-width: $md2) {
+    width: 734px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}

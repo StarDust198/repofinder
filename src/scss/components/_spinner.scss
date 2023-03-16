@@ -1,0 +1,14 @@
+body[data-theme='light'] {
+  --spinner-color: var(--gray-300);
+}
+
+body[data-theme='dark'] {
+  --spinner-color: var(--white);
+}
+
+.spinner {
+  margin-top: 3rem;
+  svg rect {
+    fill: var(--spinner-color);
+  }
+}
