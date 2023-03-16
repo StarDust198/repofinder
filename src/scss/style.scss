@@ -1,5 +1,6 @@
 @import 'base/reset';
 @import 'base/variables';
+
 // @import 'base/utility';
 
 @import 'components/container';
@@ -27,8 +28,4 @@ body {
 
 body[data-theme='dark'] {
   background-color: var(--gray-500);
-}
-
-a {
-  font-family: 'Space Mono', monospace;
 }

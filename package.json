@@ -32,7 +32,6 @@
     "gulp-webp-html-nosvg": "^1.1.1",
     "gulp-webpcss": "^1.1.1",
     "sass": "^1.58.3",
-    "svg-inline-loader": "^0.8.2",
     "webp-converter": "2.2.3",
     "webpack": "^5.75.0",
     "webpack-stream": "^7.0.0"

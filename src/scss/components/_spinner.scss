@@ -8,6 +8,7 @@ body[data-theme='dark'] {
 
 .spinner {
   margin-top: 3rem;
+
   svg rect {
     fill: var(--spinner-color);
   }

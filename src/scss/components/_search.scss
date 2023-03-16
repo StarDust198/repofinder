@@ -37,19 +37,14 @@ body[data-theme='dark'] {
     flex-grow: 5;
     height: 3.75rem;
     max-width: calc(100% - 7.5rem);
-
     border: none;
     padding: 0 0.625rem;
-
     background-color: var(--search-bg);
     color: var(--search-color);
-
     line-height: 1.5;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-
-    cursor: pointer;
 
     &::placeholder {
       color: var(--search-placeholder-color);
@@ -61,6 +56,7 @@ body[data-theme='dark'] {
 
     @media (min-width: $md3) {
       margin: 0 0.25rem;
+
       // font-size: 1rem;
     }
 

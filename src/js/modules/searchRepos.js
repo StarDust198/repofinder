@@ -1,7 +1,7 @@
 import { Repo } from './Repo.js';
-import { reposQuery } from './reposQuery.js';
+import { Query } from './Query.js';
 
-let lastQuery = '';
+const reposQuery = new Query('https://api.github.com/search/repositories');
 
 export const searchRepos = async (
   value,
@@ -12,16 +12,22 @@ export const searchRepos = async (
   const message = document.querySelector(messageSelector);
   const spinner = document.querySelector(spinnerSelector);
 
-  if (value === lastQuery) return;
-  lastQuery = value;
+  if (value === reposQuery.lastQuery) return;
 
   repoList.innerHTML = '';
   message.hidden = true;
   spinner.hidden = false;
 
-  const repos = await reposQuery(value);
-
+  const repos = await reposQuery.getItems(value);
+  if (reposQuery.loading) return;
   spinner.hidden = true;
+
+  if (reposQuery.errorStatus) {
+    message.hidden = false;
+    message.textContent = `Something went wrong.. Error status: ${reposQuery.errorStatus}`;
+    return;
+  }
+
   if (repos.length === 0) {
     message.hidden = false;
     message.textContent = 'No results found.. Try another search';
